@@ -14,11 +14,15 @@
     v-bind="pass"
   />
   <NotionBookmark v-else-if="isType('bookmark')" v-bind="pass" />
-  <NotionCallout v-else-if="isType('callout')" v-bind="pass" />
+  <NotionCallout v-else-if="isType('callout')" v-bind="pass">
+    <slot />
+  </NotionCallout>
   <NotionCode v-else-if="isType('code')" v-bind="pass" />
   <NotionEquation v-else-if="isType('equation')" v-bind="pass" />
   <NotionText v-else-if="isType('text')" v-bind="pass" />
-  <NotionQuote v-else-if="isType('quote')" v-bind="pass" />
+  <NotionQuote v-else-if="isType('quote')" v-bind="pass">
+    <slot />
+  </NotionQuote>
   <NotionTodo v-else-if="isType('to_do')" v-bind="pass" />
   <NotionToggle v-else-if="isType('toggle')" v-bind="pass">
     <slot />

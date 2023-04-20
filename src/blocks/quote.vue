@@ -1,6 +1,7 @@
 <template>
   <blockquote v-if="properties" class="notion-quote">
     <NotionTextRenderer :text="title" v-bind="pass" />
+    <slot />
   </blockquote>
 </template>
 
