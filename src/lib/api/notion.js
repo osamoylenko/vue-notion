@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 const NOTION_API = "https://www.notion.so/api/v3"
 
 const loadPageChunkBody = {
